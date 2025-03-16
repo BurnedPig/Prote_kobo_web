@@ -65,7 +65,7 @@
 
 <h2><span class="uline">販売中</span><span class="small">Lunch Menu</span></h2>
 
-<div class="list-menu">
+<div id="list-menu">
 
 <div class="list up">
 <figure><img src="images/1.jpg" alt=""></figure>
@@ -92,9 +92,8 @@
 </div>
 
 	
-<h4 id="menu_inserted"></h4>	
 <script>
-var menu1 = document.getElementById( 'menu_inserted' );
+var menu1 = document.getElementById( 'list-menu' );
 menu1.insertAdjacentHTML('afterend','<div class="list up">');
 menu1.insertAdjacentHTML('afterend','<figure><img src="images/2.jpg" alt=""></figure>');
 menu1.insertAdjacentHTML('afterend','<div class="text">');
