@@ -93,8 +93,8 @@ for (let i = 0; i < lines.length; ++i) {
 }	
 var menu1 = document.getElementById( 'insertedarea' );
 	
-for (let i = 1;i<array.length()+1;++i){
-	if(array[8][i] == ""){
+for (let i = 1; i < array.length +1 ; ++i){
+	if (array[i][8] == ""){
 		menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="https://lh3.googleusercontent.com/d/'+array[i][4]+'" width="800" height="800" allow="autoplay"></figure> \n <div class="text"> \n <h4>'+array[i][1]+'<span class="price">￥'+array[i][3]+'</span></h4> \n <p>'+array[i][5]+'</p> \n </div> \n </div>');
 	}
 	else{
