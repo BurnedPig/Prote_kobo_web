@@ -92,15 +92,16 @@ for (let i = 0; i < lines.length; ++i) {
   }
 }	
 var menu1 = document.getElementById( 'insertedarea' );
-
-for (let i = 1;i<array.length()+1;i++){
-	if(array[8][i] == ""){
-		menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="'+array[4][i]+'" alt=""></figure> \n <div class="text"> \n <h4>'+array[1][i]+'<span class="price">'+array[3][i]+'</span></h4> \n <p>'+array[5][i]+'</p> \n </div> \n </div>');
-	}
-	else{
-		menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="'+array[4][i]+'" alt=""></figure> \n <div class="text"> \n <h4>'+array[8][i]+'<span class="price">'+array[3][i]+'</span></h4> \n <p>'+array[5][i]+'</p> \n </div> \n </div>');		
-	}
-}
+menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="'+array[4][1]+'" alt=""></figure> \n <div class="text"> \n <h4>'+array[1][1]+'<span class="price">'+array[3][1]+'</span></h4> \n <p>'+array[5][1]+'</p> \n </div> \n </div>');
+	
+//for (let i = 1;i<array.length()+1;i++){
+//	if(array[8][i] == ""){
+//		menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="'+array[4][i]+'" alt=""></figure> \n <div class="text"> \n <h4>'+array[1][i]+'<span class="price">'+array[3][i]+'</span></h4> \n <p>'+array[5][i]+'</p> \n </div> \n </div>');
+//	}
+//	else{
+//		menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="'+array[4][i]+'" alt=""></figure> \n <div class="text"> \n <h4>'+array[8][i]+'<span class="price">'+array[3][i]+'</span></h4> \n <p>'+array[5][i]+'</p> \n </div> \n </div>');		
+//	}
+//}
 
 
 
