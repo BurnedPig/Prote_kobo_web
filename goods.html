@@ -70,12 +70,31 @@
 <!--/.list-menu-->
 <script>
 
-
-	
+// CSVファイルを取得
+let csv = new XMLHttpRequest();
+// CSVファイルへのパス
+csv.open("GET", "手づくり市_商品リスト_システム2024 - WEB参照用.csv", false);
+// csvファイル読み込み失敗時のエラー対応
+try {
+  csv.send(null);
+} catch (err) {
+  console.log(err);
+}
+// 配列を定義
+let array = [];
+// 改行ごとに配列化
+let lines = csv.responseText.split(/\r\n|\n/);
+// 1行ごとに処理
+for (let i = 0; i < lines.length; ++i) {
+  let cells = lines[i].split(",");
+  if (cells.length != 1) {
+    array.push(cells);
+  }
+}	
 var menu1 = document.getElementById( 'insertedarea' );
-menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="images/2.jpg" alt=""></figure> \n <div class="text"> \n <h4>鼻毛大魔神<span class="price">2,000yen</span></h4> \n <p>恐ろしく速い手刀！！</p> \n </div> \n </div>');
-menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="images/2.jpg" alt=""></figure> \n <div class="text"> \n <h4>鼻毛大魔神<span class="price">2,000yen</span></h4> \n <p>恐ろしく速い手刀！！</p> \n </div> \n </div>');
-menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="images/2.jpg" alt=""></figure> \n <div class="text"> \n <h4>鼻毛大魔神<span class="price">2,000yen</span></h4> \n <p>恐ろしく速い手刀！！</p> \n </div> \n </div>');
+
+menu1.insertAdjacentHTML('afterbegin','<div class="list up"> \n <figure><img src="images/2.jpg" alt=""></figure> \n <div class="text"> \n <h4>array[0][0]<span class="price">2,000yen</span></h4> \n <p>恐ろしく速い手刀！！</p> \n </div> \n </div>');
+
 
 
 
