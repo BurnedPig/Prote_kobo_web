@@ -95,10 +95,20 @@ var menu1 = document.getElementById( 'insertedarea' );
 	
 for (let i = 1; i < array.length +1 ; ++i){
 	if (array[i][8] == ""){
-		menu1.insertAdjacentHTML('beforeend','<div class="list up"> \n <figure><img src="https://lh3.googleusercontent.com/d/'+array[i][4]+'" width="500" height="500" allow="autoplay"></figure> \n <div class="text"> \n <h4>'+array[i][1]+'<span class="price">￥'+array[i][3]+'</span></h4> \n <p>'+array[i][5]+'</p> \n </div> \n </div>');
+		if (array[i][7] == "はい(おすすめ)"){
+			menu1.insertAdjacentHTML('beforeend','<div class="list up"> \n <figure><img src="https://lh3.googleusercontent.com/d/'+array[i][4]+'" width="500" height="500" allow="autoplay"></figure> \n <div class="text"> \n <h4>'+array[i][1]+'<span class="price">￥'+array[i][3]+'</span></h4> \n <p>'+array[i][5]+'</p> \n </div> \n <span class="newicon">おすすめ</span> \n </div>');
+		}
+		else{
+			menu1.insertAdjacentHTML('beforeend','<div class="list up"> \n <figure><img src="https://lh3.googleusercontent.com/d/'+array[i][4]+'" width="500" height="500" allow="autoplay"></figure> \n <div class="text"> \n <h4>'+array[i][1]+'<span class="price">￥'+array[i][3]+'</span></h4> \n <p>'+array[i][5]+'</p> \n </div> \n </div>');
+		}
 	}
-	else{
-		menu1.insertAdjacentHTML('beforeend','<div class="list up"> \n <figure><img src="https://lh3.googleusercontent.com/d/'+array[i][4]+'" width="500" height="500" allow="autoplay"></figure> \n <div class="text"> \n <h4>'+array[i][8]+'<span class="price">￥'+array[i][3]+'</span></h4> \n <p>'+array[i][5]+'</p> \n </div> \n </div>');
+	else{		
+		if (array[i][7] == "はい(おすすめ)"){
+			menu1.insertAdjacentHTML('beforeend','<div class="list up"> \n <figure><img src="https://lh3.googleusercontent.com/d/'+array[i][4]+'" width="500" height="500" allow="autoplay"></figure> \n <div class="text"> \n <h4>'+array[i][8]+'<span class="price">￥'+array[i][3]+'</span></h4> \n <p>'+array[i][5]+'</p> \n </div> \n <span class="newicon">おすすめ</span> \n </div>');
+		}
+		else{
+			menu1.insertAdjacentHTML('beforeend','<div class="list up"> \n <figure><img src="https://lh3.googleusercontent.com/d/'+array[i][4]+'" width="500" height="500" allow="autoplay"></figure> \n <div class="text"> \n <h4>'+array[i][8]+'<span class="price">￥'+array[i][3]+'</span></h4> \n <p>'+array[i][5]+'</p> \n </div> \n </div>');
+		}	
 	}
 }
 
